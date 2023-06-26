@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Squats {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt(); // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int X = scanner.nextInt(); // Number of sets of squats
+            
+            int totalSquats = X * 15; // Calculate the total number of squats
+            
+            System.out.println(totalSquats);
+        }
+    }
+}
