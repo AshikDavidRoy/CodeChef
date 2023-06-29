@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class UnattemptedProblems {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int X = scanner.nextInt(); // Count of all problems in Beginner's section
+        int Y = scanner.nextInt(); // Count of Chef's attempted problems
+        
+        int unattempted = X - Y; // Calculate the number of unattempted problems
+        
+        System.out.println(unattempted);
+    }
+}
