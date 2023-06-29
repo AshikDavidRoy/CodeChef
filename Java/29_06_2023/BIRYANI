@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class BiryaniCost {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt(); // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int X = scanner.nextInt(); // Number of weeks
+            int Y = scanner.nextInt(); // Cost per week
+            
+            int totalCost = X * Y; // Calculate the total amount of money to pay
+            
+            System.out.println(totalCost);
+        }
+    }
+}
