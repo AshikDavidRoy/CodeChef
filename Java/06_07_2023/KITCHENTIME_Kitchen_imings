@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class ChefWorkingHours {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt(); // Number of test cases
+
+        while (T > 0) {
+            int X = scanner.nextInt(); // Starting time
+            int Y = scanner.nextInt(); // Ending time
+
+            int hoursWorked = calculateHoursWorked(X, Y);
+            System.out.println(hoursWorked);
+
+            T--;
+        }
+
+        scanner.close();
+    }
+
+    private static int calculateHoursWorked(int X, int Y) {
+        int hoursWorked;
+
+        if (X < Y) {
+            hoursWorked = Y - X;
+        } else {
+            hoursWorked = (12 - X) + Y;
+        }
+
+        return hoursWorked;
+    }
+}
