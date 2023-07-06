@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class IncomeTax {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt(); // Number of test cases
+
+        while (T > 0) {
+            int X = scanner.nextInt(); // Total income
+
+            int moneyReceived = calculateMoneyReceived(X);
+            System.out.println(moneyReceived);
+
+            T--;
+        }
+
+        scanner.close();
+    }
+
+    private static int calculateMoneyReceived(int X) {
+        int moneyReceived;
+
+        if (X > 100) {
+            moneyReceived = X - 10;
+        } else {
+            moneyReceived = X;
+        }
+
+        return moneyReceived;
+    }
+}
