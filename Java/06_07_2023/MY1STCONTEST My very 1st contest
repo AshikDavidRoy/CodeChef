@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class ContestRatings {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();  // Number of new users
+        int A = scanner.nextInt();  // Number of users who just saw the problem
+        int B = scanner.nextInt();  // Number of users who made a submission but couldn't solve any problem
+        
+        int ratingContest = N - A;
+        int ratingGreaterThan1000 = ratingContest - B;
+        
+        System.out.println(ratingContest + " " + ratingGreaterThan1000);
+        
+        scanner.close();
+    }
+}
