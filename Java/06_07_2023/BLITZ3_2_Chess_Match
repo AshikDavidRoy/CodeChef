@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ChessMatchDuration {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();  // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int N = scanner.nextInt();  // Number of turns
+            int A = scanner.nextInt();  // Seconds left for player A
+            int B = scanner.nextInt();  // Seconds left for player B
+            
+            int totalGivenTime = 2 * (180 + N);
+            int totalLeftTime = A + B;
+            int duration = totalGivenTime - totalLeftTime;
+            
+            System.out.println(duration);
+        }
+        
+        scanner.close();
+    }
+}
