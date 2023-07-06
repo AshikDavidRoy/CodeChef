@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class PizzaOrder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt(); // Number of test cases
+
+        while (T > 0) {
+            int N = scanner.nextInt(); // Number of friends
+            int X = scanner.nextInt(); // Number of slices per friend
+
+            int pizzasNeeded = calculatePizzasNeeded(N, X);
+            System.out.println(pizzasNeeded);
+
+            T--;
+        }
+
+        scanner.close();
+    }
+
+    private static int calculatePizzasNeeded(int N, int X) {
+        int totalSlicesNeeded = N * X; // Total slices needed by all friends
+
+        int pizzasNeeded = totalSlicesNeeded / 4; // Number of pizzas needed
+        if (totalSlicesNeeded % 4 != 0) {
+            pizzasNeeded++; // If there are remaining slices, add one more pizza
+        }
+
+        return pizzasNeeded;
+    }
+}
