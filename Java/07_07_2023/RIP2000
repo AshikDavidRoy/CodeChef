@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class CurrencyConversion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();  // Number of Rs. 2000 notes
+        
+        int notes500 = N * 4;  // Number of Rs. 500 notes needed
+        
+        System.out.println(notes500);
+        
+        scanner.close();
+    }
+}
