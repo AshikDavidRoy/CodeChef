@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class TotalCourses {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();  // Number of languages
+        
+        int totalCourses = N * 2;  // Total number of courses
+        
+        System.out.println(totalCourses);
+        
+        scanner.close();
+    }
+}
