@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class TomAndJerry {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();  // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int X = scanner.nextInt();  // Jerry's speed
+            int Y = scanner.nextInt();  // Tom's speed
+            
+            if (Y > X) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+        
+        scanner.close();
+    }
+}
