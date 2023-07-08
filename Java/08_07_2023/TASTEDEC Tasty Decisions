@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class HalloweenSweets {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();  // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int X = scanner.nextInt();  // Tastiness of chocolate
+            int Y = scanner.nextInt();  // Tastiness of candy
+            
+            int chocolateTastiness = X * 2;  // Total tastiness of chocolate packet
+            int candyTastiness = Y * 5;  // Total tastiness of candy packet
+            
+            if (chocolateTastiness > candyTastiness) {
+                System.out.println("Chocolate");
+            } else if (chocolateTastiness < candyTastiness) {
+                System.out.println("Candy");
+            } else {
+                System.out.println("Either");
+            }
+        }
+        
+        scanner.close();
+    }
+}
