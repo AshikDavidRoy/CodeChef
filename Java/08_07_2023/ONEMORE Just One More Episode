@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class WatchingShows {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();  // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int X = scanner.nextInt();  // Time until exam starts
+            
+            if (X <= 24) {
+                System.out.println("NO");
+            } else {
+                System.out.println("YES");
+            }
+        }
+        
+        scanner.close();
+    }
+}
