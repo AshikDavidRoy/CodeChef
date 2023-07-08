@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class SecondMaximum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();  // Number of triples
+        
+        for (int i = 0; i < N; i++) {
+            int a = scanner.nextInt();  // First number
+            int b = scanner.nextInt();  // Second number
+            int c = scanner.nextInt();  // Third number
+            
+            int secondMax = getSecondMaximum(a, b, c);
+            System.out.println(secondMax);
+        }
+        
+        scanner.close();
+    }
+    
+    public static int getSecondMaximum(int a, int b, int c) {
+        if (a > b) {
+            if (b > c) {
+                return b;  // b is the second maximum
+            } else if (a > c) {
+                return c;  // c is the second maximum
+            } else {
+                return a;  // a is the second maximum
+            }
+        } else {
+            if (a > c) {
+                return a;  // a is the second maximum
+            } else if (b > c) {
+                return c;  // c is the second maximum
+            } else {
+                return b;  // b is the second maximum
+            }
+        }
+    }
+}
