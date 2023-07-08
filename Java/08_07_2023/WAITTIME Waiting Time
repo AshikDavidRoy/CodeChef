@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class WaitingForInformation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();  // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int K = scanner.nextInt();  // Number of weeks
+            int X = scanner.nextInt();  // Number of days passed
+            
+            int remainingDays = calculateRemainingDays(K, X);
+            System.out.println(remainingDays);
+        }
+        
+        scanner.close();
+    }
+    
+    public static int calculateRemainingDays(int K, int X) {
+        int totalDays = 7 * K;  // Total number of days
+        int remainingDays = totalDays - X;  // Number of remaining days
+        
+        return remainingDays;
+    }
+}
