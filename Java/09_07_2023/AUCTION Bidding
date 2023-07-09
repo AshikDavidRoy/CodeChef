@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class AuctionWinner {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();  // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int A = scanner.nextInt();  // Amount bid by Alice
+            int B = scanner.nextInt();  // Amount bid by Bob
+            int C = scanner.nextInt();  // Amount bid by Charlie
+            
+            if (A > B && A > C) {
+                System.out.println("Alice");
+            } else if (B > A && B > C) {
+                System.out.println("Bob");
+            } else {
+                System.out.println("Charlie");
+            }
+        }
+        
+        scanner.close();
+    }
+}
