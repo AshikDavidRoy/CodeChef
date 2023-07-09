@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ChocolateDistribution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();  // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int A = scanner.nextInt();  // Number of chocolates Alice has
+            int B = scanner.nextInt();  // Number of chocolates Bob has
+            
+            if (A % 2 == 0 && B % 2 == 0) {
+                System.out.println("YES");
+            } else if (A % 2 != 0 && B % 2 != 0) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+        
+        scanner.close();
+    }
+}
