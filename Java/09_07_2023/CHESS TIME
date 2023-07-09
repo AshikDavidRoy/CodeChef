@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ChessGames {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();  // Number of test cases
+        
+        for (int i = 0; i < T; i++) {
+            int hours = scanner.nextInt();  // Hours of free time
+            
+            int games = calculateGames(hours);  // Calculate the maximum number of games
+            
+            System.out.println(games);  // Print the number of games
+        }
+        
+        scanner.close();
+    }
+    
+    private static int calculateGames(int hours) {
+        int minutes = hours * 60;  // Convert hours to minutes
+        
+        int games = minutes / 20;  // Calculate the maximum number of games
+        
+        return games;
+    }
+}
