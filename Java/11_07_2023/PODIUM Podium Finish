@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class RaceTimeGap {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numTestCases = scanner.nextInt(); // number of test cases
+
+        for (int i = 0; i < numTestCases; i++) {
+            int chefToRunnerUp = scanner.nextInt(); // time gap between Chef and runner up
+            int runnerUpToWinner = scanner.nextInt(); // time gap between runner up and winner
+
+            int chefToWinner = chefToRunnerUp + runnerUpToWinner; // calculate the time gap between Chef and winner
+
+            System.out.println(chefToWinner); // print the result
+        }
+
+        scanner.close();
+    }
+}
