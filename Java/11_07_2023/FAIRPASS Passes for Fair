@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class FairEntry {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numTestCases = scanner.nextInt(); // number of test cases
+
+        for (int i = 0; i < numTestCases; i++) {
+            int numFriends = scanner.nextInt(); // number of friends
+            int numPasses = scanner.nextInt(); // number of passes
+
+            if (numPasses >= numFriends) {
+                System.out.println("YES"); // Chef can enter the fair with all his friends
+            } else {
+                System.out.println("NO"); // Chef cannot enter the fair with all his friends
+            }
+        }
+
+        scanner.close();
+    }
+}
