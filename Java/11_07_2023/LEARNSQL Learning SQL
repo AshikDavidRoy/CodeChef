@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int r = scanner.nextInt(); // number of initial rows
+        int c = scanner.nextInt(); // number of columns
+        int e = scanner.nextInt(); // number of extra rows
+        
+        int totalCells = (r + e) * c; // calculate the total number of cells
+        
+        System.out.println(totalCells); // print the result
+        
+        scanner.close();
+    }
+}
