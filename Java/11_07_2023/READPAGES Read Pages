@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class BookReading {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int testCases = scanner.nextInt(); // number of test cases
+
+        for (int i = 0; i < testCases; i++) {
+            int totalPages = scanner.nextInt(); // total number of pages
+            int pagesPerDay = scanner.nextInt(); // number of pages Chef can read in a day
+            int totalDays = scanner.nextInt(); // number of days
+
+            // Check if Chef can complete the book
+            if (pagesPerDay * totalDays >= totalPages) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+
+        scanner.close();
+    }
+}
