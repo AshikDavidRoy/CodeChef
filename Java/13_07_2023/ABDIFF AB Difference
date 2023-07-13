@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ChefProgramming {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int A = scanner.nextInt(); // First integer A
+        int B = scanner.nextInt(); // Second integer B
+        
+        int correctAnswer = A + B; // Calculate the correct answer
+        int chefOutput = A * B; // Chef's output
+        
+        int difference = Math.abs(correctAnswer - chefOutput); // Calculate the absolute difference
+        
+        System.out.println(difference); // Print the difference
+        
+        scanner.close();
+    }
+}
