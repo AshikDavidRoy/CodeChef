@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class FootballPlayer {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int A = scanner.nextInt(); // Goals scored by Messi
+        int B = scanner.nextInt(); // Assists by Messi
+        int X = scanner.nextInt(); // Goals scored by Ronaldo
+        int Y = scanner.nextInt(); // Assists by Ronaldo
+        
+        int pointsMessi = (2 * A) + B; // Calculate total points for Messi
+        int pointsRonaldo = (2 * X) + Y; // Calculate total points for Ronaldo
+        
+        if (pointsMessi > pointsRonaldo) {
+            System.out.println("Messi");
+        } else if (pointsRonaldo > pointsMessi) {
+            System.out.println("Ronaldo");
+        } else {
+            System.out.println("Equal");
+        }
+        
+        scanner.close();
+    }
+}
