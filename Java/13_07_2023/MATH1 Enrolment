@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class MathCourse {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt(); // Number of test cases
+
+        for (int i = 0; i < T; i++) {
+            int X = scanner.nextInt(); // Current number of seats
+            int Y = scanner.nextInt(); // Number of students interested
+
+            int extraSeats = Math.max(0, Y - X); // Calculate the minimum number of extra seats needed
+
+            System.out.println(extraSeats); // Output the minimum number of extra seats needed
+        }
+
+        scanner.close();
+    }
+}
