@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class KitchenTimetable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+
+        for (int i = 0; i < t; i++) {
+            int n = scanner.nextInt();
+            int[] finishTimes = new int[n];
+            int[] cookTimes = new int[n];
+
+            for (int j = 0; j < n; j++) {
+                finishTimes[j] = scanner.nextInt();
+            }
+
+            for (int j = 0; j < n; j++) {
+                cookTimes[j] = scanner.nextInt();
+            }
+
+            int count = countStudentsCanCook(n, finishTimes, cookTimes);
+            System.out.println(count);
+        }
+
+        scanner.close();
+    }
+
+    private static int countStudentsCanCook(int n, int[] finishTimes, int[] cookTimes) {
+        int count = 0;
+        int previousFinishTime = 0;
+
+        for (int i = 0; i < n; i++) {
+            int remainingTime = finishTimes[i] - previousFinishTime;
+            previousFinishTime = finishTimes[i];
+
+            if (remainingTime >= cookTimes[i]) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
