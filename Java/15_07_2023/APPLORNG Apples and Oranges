@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the amount of money Bob has, the cost of apples per kg, and the cost of oranges per kg
+        int amount = scanner.nextInt();
+        int costApples = scanner.nextInt();
+        int costOranges = scanner.nextInt();
+        
+        // Calculate the total cost of buying 1 kg each of apple and orange
+        int totalCost = costApples + costOranges;
+        
+        // Check if Bob can buy the fruits and print the result
+        if (amount >= totalCost) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+        
+        scanner.close();
+    }
+}
