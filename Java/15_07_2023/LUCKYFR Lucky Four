@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+        for (int i = 0; i < t; i++) {
+            int num = scanner.nextInt();
+            int count = countDigit4(num);
+            System.out.println(count);
+        }
+        scanner.close();
+    }
+
+    private static int countDigit4(int num) {
+        int count = 0;
+        while (num > 0) {
+            if (num % 10 == 4) {
+                count++;
+            }
+            num /= 10;
+        }
+        return count;
+    }
+}
