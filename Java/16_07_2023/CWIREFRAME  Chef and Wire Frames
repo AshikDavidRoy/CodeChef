@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class WireframeCost {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+
+        for (int i = 0; i < T; i++) {
+            int N = sc.nextInt(); // length of the plate
+            int M = sc.nextInt(); // width of the plate
+            int X = sc.nextInt(); // cost per cm
+
+            int totalLength = 2 * (N + M); // calculate the total length of the wireframe
+            int totalCost = totalLength * X; // calculate the total cost
+
+            System.out.println(totalCost);
+        }
+
+        sc.close();
+    }
+}
