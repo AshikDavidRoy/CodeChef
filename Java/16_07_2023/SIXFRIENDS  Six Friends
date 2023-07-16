@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class AccommodationCost {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+
+        for (int i = 0; i < T; i++) {
+            int X = sc.nextInt(); // cost of double room
+            int Y = sc.nextInt(); // cost of triple room
+
+            int minAmount = Math.min(3 * X, 2 * Y); // calculate the minimum amount required
+
+            System.out.println(minAmount);
+        }
+
+        sc.close();
+    }
+}
