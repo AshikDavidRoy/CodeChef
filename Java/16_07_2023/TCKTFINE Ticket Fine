@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class TicketFine {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        for (int i = 0; i < t; i++) {
+            int x = sc.nextInt();
+            int p = sc.nextInt();
+            int q = sc.nextInt();
+
+            int passengersWithoutTicket = p - q;
+            int totalFine = passengersWithoutTicket * x;
+
+            System.out.println(totalFine);
+        }
+
+        sc.close();
+    }
+}
