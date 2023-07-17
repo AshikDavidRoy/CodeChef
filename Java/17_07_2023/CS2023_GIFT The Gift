@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class LaptopGift {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int X = sc.nextInt(); // amount Om has
+        int N = sc.nextInt(); // price of the laptop
+        int M = sc.nextInt(); // amount in the Gymkhana fund
+
+        if (X + M >= N) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+
+        sc.close();
+    }
+}
