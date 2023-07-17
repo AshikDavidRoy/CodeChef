@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SpiceLevel {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt(); // number of test cases
+
+        for (int i = 0; i < T; i++) {
+            int X = sc.nextInt(); // spice level of the item
+
+            if (X < 4) {
+                System.out.println("MILD");
+            } else if (X < 7) {
+                System.out.println("MEDIUM");
+            } else {
+                System.out.println("HOT");
+            }
+        }
+
+        sc.close();
+    }
+}
