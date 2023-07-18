@@ -1,0 +1,19 @@
+# Step 1
+T = int(input())
+
+# Step 2
+for _ in range(T):
+    # Step 2.1
+    X, Y = map(int, input().split())
+
+    # Step 2.2
+    buying_price = X - Y
+
+    # Step 2.3
+    new_selling_price = X + 0.1 * X
+
+    # Step 2.4
+    new_profit = new_selling_price - buying_price
+
+    # Step 2.5
+    print(int(new_profit))
