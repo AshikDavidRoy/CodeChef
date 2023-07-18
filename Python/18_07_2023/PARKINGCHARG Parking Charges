@@ -1,0 +1,10 @@
+# Step 1
+X, Y, H = map(int, input().split())
+
+# Step 2
+charges_first_hour = X
+charges_extra_hours = (H - 1) * Y
+total_charges = charges_first_hour + charges_extra_hours
+
+# Step 3
+print(total_charges)
