@@ -1,0 +1,15 @@
+# Step 1
+T = int(input())
+
+# Step 2
+for _ in range(T):
+    # Step 2.1
+    C = int(input())
+
+    # Step 2.2
+    if C > 20:
+        # Step 2.2.1
+        print("HOT")
+    else:
+        # Step 2.2.2
+        print("COLD")
