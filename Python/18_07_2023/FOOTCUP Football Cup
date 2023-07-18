@@ -1,0 +1,15 @@
+# Step 1
+T = int(input())
+
+# Step 2
+for _ in range(T):
+    # Step 2.1
+    X, Y = map(int, input().split())
+
+    # Step 2.2
+    if X == Y and X > 0:
+        # Step 2.2.1
+        print("YES")
+    else:
+        # Step 2.2.2
+        print("NO")
