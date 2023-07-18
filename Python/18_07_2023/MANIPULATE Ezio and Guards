@@ -1,0 +1,15 @@
+# Step 1: Read the number of test cases
+num_test_cases = int(input())
+
+# Step 2: Iterate through each test case
+for _ in range(num_test_cases):
+    # Step 2.1: Read the maximum number of guards Ezio can manipulate and the number of guards present
+    max_guards_manipulate, num_guards_present = map(int, input().split())
+
+    # Step 2.2: Check if Ezio can manipulate all guards
+    if max_guards_manipulate >= num_guards_present:
+        # Step 2.2.1: Print "YES" if Ezio can manipulate all guards
+        print("YES")
+    else:
+        # Step 2.2.2: Print "NO" if Ezio cannot manipulate all guards
+        print("NO")
