@@ -1,0 +1,15 @@
+# Step 1
+T = int(input())
+
+# Step 2
+for _ in range(T):
+    # Step 2.1
+    A, B, C = map(int, input().split())
+
+    # Step 2.2
+    if A + B + C >= 100 and min(A, B, C) >= 10:
+        # Step 2.2.1
+        print("PASS")
+    else:
+        # Step 2.2.2
+        print("FAIL")
