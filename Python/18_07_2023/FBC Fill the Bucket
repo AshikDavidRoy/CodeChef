@@ -1,0 +1,13 @@
+# Step 1
+T = int(input())
+
+# Step 2
+for _ in range(T):
+    # Step 2.1
+    K, X = map(int, input().split())
+
+    # Step 2.2
+    remaining_capacity = K - X
+
+    # Step 2.3
+    print(remaining_capacity)
