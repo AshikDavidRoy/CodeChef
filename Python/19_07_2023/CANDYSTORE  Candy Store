@@ -1,0 +1,19 @@
+# Step 1
+T = int(input())
+
+# Step 2
+for _ in range(T):
+    # Step 2.1
+    X, Y = map(int, input().split())
+
+    # Step 2.2
+    if Y <= X:
+        # Step 2.2.1
+        total_amount = Y
+    else:
+        # Step 2.2.2
+        extra_chocolates = Y - X
+        total_amount = X + (2 * extra_chocolates)
+
+    # Step 2.3
+    print(total_amount)
