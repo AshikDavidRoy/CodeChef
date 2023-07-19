@@ -1,0 +1,23 @@
+def most_active_role(num_setter, num_tester, num_editorialist):
+    if num_setter > num_tester and num_setter > num_editorialist:
+        return "SETTER"
+    elif num_tester > num_setter and num_tester > num_editorialist:
+        return "TESTER"
+    else:
+        return "EDITORIALIST"
+
+def main():
+    # Step 1: Read the number of test cases
+    num_test_cases = int(input())
+
+    # Step 2: Process each test case
+    for _ in range(num_test_cases):
+        # Step 2a: Read the input for each test case
+        num_setter, num_tester, num_editorialist = map(int, input().split())
+
+        # Step 2b: Determine the most active role
+        result = most_active_role(num_setter, num_tester, num_editorialist)
+        print(result)
+
+if __name__ == "__main__":
+    main()
