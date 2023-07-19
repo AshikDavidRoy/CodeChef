@@ -1,0 +1,14 @@
+# Step 1
+T = int(input())
+
+# Step 2
+for _ in range(T):
+    # Step 2a
+    A, B, C = map(int, input().split())
+
+    # Step 2b
+    if A != B and B != C and C != A:
+        # Step 2c
+        print("YES")
+    else:
+        print("NO")
