@@ -1,0 +1,18 @@
+def can_eat_all_loaves(N, M, K):
+    days_to_expiration = (N + K - 1) // K
+    if days_to_expiration <= M:
+        return "Yes"
+    else:
+        return "No"
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the input for each test case
+    N, M, K = map(int, input().split())
+
+    # Check if Eikooc can eat all loaves before they expire
+    result = can_eat_all_loaves(N, M, K)
+    print(result)
