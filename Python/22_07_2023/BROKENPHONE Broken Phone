@@ -1,0 +1,18 @@
+def phone_decision(x, y):
+    # Compare the costs of repairing and buying a new phone
+    if x < y:
+        return "REPAIR"
+    elif x > y:
+        return "NEW PHONE"
+    else:
+        return "ANY"
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the costs of repairing and buying a new phone for each test case
+    x, y = map(int, input().split())
+
+    # Determine if it is better to repair or buy a new phone and print the result
+    print(phone_decision(x, y))
