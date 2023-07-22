@@ -1,0 +1,22 @@
+def cheaper_tv(A, B, C, D):
+    # Calculate the final cost of each TV after applying discounts
+    cost_tv1 = A - C
+    cost_tv2 = B - D
+
+    # Compare the costs and determine which TV is cheaper
+    if cost_tv1 < cost_tv2:
+        return "First"
+    elif cost_tv1 > cost_tv2:
+        return "Second"
+    else:
+        return "Any"
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the input for each test case
+    A, B, C, D = map(int, input().split())
+
+    # Determine which TV is cheaper and print the result
+    print(cheaper_tv(A, B, C, D))
