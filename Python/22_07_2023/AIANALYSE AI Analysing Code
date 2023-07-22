@@ -1,0 +1,12 @@
+def is_feature_available(code_length):
+    # Check if the feature is available on this code
+    return code_length <= 1000
+
+# Read the number of characters in the code
+C = int(input())
+
+# Check if the feature is available and print the result
+if is_feature_available(C):
+    print("Yes")
+else:
+    print("No")
