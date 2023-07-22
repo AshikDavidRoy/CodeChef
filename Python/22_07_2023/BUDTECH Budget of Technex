@@ -1,0 +1,9 @@
+
+T = int(input())
+
+for _ in range(T):
+ 
+    R = int(input())
+
+    
+    print(R*100)
