@@ -1,0 +1,12 @@
+def is_eligible_for_puzzle_hunt(team_size):
+    # Check if the team is eligible to participate
+    return 6 <= team_size <= 8
+
+# Read the number of people in Chef's team
+N = int(input())
+
+# Check if the team is eligible and print the result
+if is_eligible_for_puzzle_hunt(N):
+    print("Yes")
+else:
+    print("No")
