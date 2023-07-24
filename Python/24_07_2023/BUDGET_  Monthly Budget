@@ -1,0 +1,19 @@
+def can_meet_expenditure(X, Y):
+    # Calculate the total expenditure for the entire month
+    total_expenditure = 30 * Y
+    
+    # Check if Akshat has enough money to meet the daily expenditure for the entire month
+    if X >= total_expenditure:
+        return "YES"
+    else:
+        return "NO"
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the amount of money Akshat has (X) and his daily expenditure (Y)
+    X, Y = map(int, input().split())
+    
+    # Check if Akshat can meet his daily expenditure for the entire month and print the result
+    print(can_meet_expenditure(X, Y))
