@@ -1,0 +1,16 @@
+def can_all_friends_enroll(N, M, K):
+    # Check if there are enough seats for all the friends and the other students
+    return (N + K) <= M
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the values for each test case
+    N, M, K = map(int, input().split())
+
+    # Check if all the friends can enroll and print the result
+    if can_all_friends_enroll(N, M, K):
+        print("Yes")
+    else:
+        print("No")
