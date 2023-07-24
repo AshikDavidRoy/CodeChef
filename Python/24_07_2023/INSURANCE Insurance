@@ -1,0 +1,16 @@
+def calculate_rebate(X, Y):
+    # Check if the damages are within the upper cap
+    if Y <= X:
+        return Y
+    else:
+        return X
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the values for each test case
+    X, Y = map(int, input().split())
+
+    # Calculate and print the amount that will be rebated by the insurance company
+    print(calculate_rebate(X, Y))
