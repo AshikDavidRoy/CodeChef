@@ -1,0 +1,9 @@
+def can_beat_einstein(current_iq):
+    final_iq = current_iq + 7
+    return "Yes" if final_iq > 170 else "No"
+
+# Read the current IQ of Chef
+X = int(input())
+
+# Determine if Chef can beat Einstein after learning a musical instrument
+print(can_beat_einstein(X))
