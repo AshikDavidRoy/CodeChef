@@ -1,0 +1,12 @@
+def can_access_cred_programs(credit_score):
+    # Check if the credit score is greater than or equal to 750
+    if credit_score >= 750:
+        return "YES"
+    else:
+        return "NO"
+
+# Read the credit score
+X = int(input())
+
+# Check if it is possible to access CRED programs and print the result
+print(can_access_cred_programs(X))
