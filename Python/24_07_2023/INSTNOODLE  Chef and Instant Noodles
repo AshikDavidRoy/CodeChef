@@ -1,0 +1,9 @@
+def max_customers_served(X, Y):
+    # Calculate the total number of packets that can be cooked in Y minutes
+    return X * Y
+
+# Read the input X and Y
+X, Y = map(int, input().split())
+
+# Calculate and print the maximum number of customers served
+print(max_customers_served(X, Y))
