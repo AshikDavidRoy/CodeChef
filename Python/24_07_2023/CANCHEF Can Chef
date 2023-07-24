@@ -1,0 +1,22 @@
+def can_attend_and_return(petrol_liters, distance_km):
+    # Calculate the total distance to be covered (round trip)
+    total_distance = 2 * distance_km
+
+    # Calculate the maximum distance that can be covered with the given amount of petrol
+    max_distance_covered = petrol_liters * 15
+
+    # Check if Chef can attend the event and return home
+    return max_distance_covered >= total_distance
+
+# Read the number of test cases
+num_test_cases = int(input())
+
+for _ in range(num_test_cases):
+    # Read the values for each test case
+    petrol_liters, distance_km = map(int, input().split())
+
+    # Check if Chef can attend the event and return home and print the result
+    if can_attend_and_return(petrol_liters, distance_km):
+        print("YES")
+    else:
+        print("NO")
