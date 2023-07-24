@@ -1,0 +1,17 @@
+def who_takes_home(A):
+    if A % 2 == 0 and A % 7 == 0:
+        return "Alice"
+    elif A % 2 != 0 and A % 9 == 0:
+        return "Bob"
+    else:
+        return "Charlie"
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the value for each test case
+    A = int(input())
+
+    # Determine who takes the number home and print the result
+    print(who_takes_home(A))
