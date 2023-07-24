@@ -1,0 +1,18 @@
+def sum_of_digits(num):
+    # Convert the number to a string and iterate through its digits
+    num_str = str(num)
+    digit_sum = 0
+    for digit in num_str:
+        # Convert each digit back to an integer and add it to the sum
+        digit_sum += int(digit)
+    return digit_sum
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the number for each test case
+    N = int(input())
+
+    # Calculate and print the sum of digits for each test case
+    print(sum_of_digits(N))
