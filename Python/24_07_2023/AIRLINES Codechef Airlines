@@ -1,0 +1,13 @@
+def calculate_max_earnings(X, Y, Z):
+    total_seats = X * 10
+    return min(Y, total_seats) * Z
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the values for each test case
+    X, Y, Z = map(int, input().split())
+
+    # Calculate and print the maximum amount Chef can earn on the first day
+    print(calculate_max_earnings(X, Y, Z))
