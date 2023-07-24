@@ -1,0 +1,18 @@
+def total_tires(bikes, cars):
+    # Calculate the total number of tires for bikes and cars
+    total_bike_tires = bikes * 2
+    total_car_tires = cars * 4
+
+    # Calculate the total number of tires on the road
+    total_tires_on_road = total_bike_tires + total_car_tires
+    return total_tires_on_road
+
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the number of bikes and cars for each test case
+    bikes, cars = map(int, input().split())
+
+    # Calculate and print the total number of tires on the road
+    print(total_tires(bikes, cars))
