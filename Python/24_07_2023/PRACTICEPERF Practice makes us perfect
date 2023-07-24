@@ -1,0 +1,21 @@
+def number_of_weeks_with_target_solved(p1, p2, p3, p4):
+    # Initialize a variable to keep track of the number of weeks with target solved
+    weeks_with_target_solved = 0
+    
+    # Check each week's problem count and increment the count if it's greater than or equal to 10
+    if p1 >= 10:
+        weeks_with_target_solved += 1
+    if p2 >= 10:
+        weeks_with_target_solved += 1
+    if p3 >= 10:
+        weeks_with_target_solved += 1
+    if p4 >= 10:
+        weeks_with_target_solved += 1
+    
+    return weeks_with_target_solved
+
+# Read the number of problems solved in each week
+p1, p2, p3, p4 = map(int, input().split())
+
+# Calculate and print the number of weeks with target solved
+print(number_of_weeks_with_target_solved(p1, p2, p3, p4))
