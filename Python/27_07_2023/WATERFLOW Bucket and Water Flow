@@ -1,0 +1,22 @@
+def bucket_status(W, X, Y, Z):
+    total_inflow = W + (Y * Z)
+    if total_inflow == X:
+        return "filled"
+    elif total_inflow > X:
+        return "overflow"
+    else:
+        return "unfilled"
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the initial water, maximum capacity, flow rate, and hours of flow
+    W, X, Y, Z = map(int, input().split())
+    
+    # Check the status of the bucket
+    result = bucket_status(W, X, Y, Z)
+    
+    # Print the result
+    print(result)
