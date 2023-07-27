@@ -1,0 +1,19 @@
+def is_dominant_army(NA, NB, NC):
+    if (NA > NB + NC) or (NB > NA + NC) or (NC > NA + NB):
+        return "YES"
+    else:
+        return "NO"
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the number of warriors in the armies of kingdoms A, B, and C
+    NA, NB, NC = map(int, input().split())
+    
+    # Check if any of the armies is dominant
+    result = is_dominant_army(NA, NB, NC)
+    
+    # Print the result
+    print(result)
