@@ -1,0 +1,19 @@
+def has_monopolistic_advantage(revenue1, revenue2, revenue3):
+    if revenue1 > revenue2 + revenue3 or revenue2 > revenue1 + revenue3 or revenue3 > revenue1 + revenue2:
+        return "YES"
+    else:
+        return "NO"
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the revenue of the three companies
+    R1, R2, R3 = map(int, input().split())
+    
+    # Check if any of the companies has a monopolistic advantage
+    result = has_monopolistic_advantage(R1, R2, R3)
+    
+    # Print the result
+    print(result)
