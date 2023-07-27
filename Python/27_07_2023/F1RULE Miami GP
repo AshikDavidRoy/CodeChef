@@ -1,0 +1,20 @@
+def is_allowed_to_race(X, Y):
+    max_time_allowed = X * 1.07
+    if Y <= max_time_allowed:
+        return "YES"
+    else:
+        return "NO"
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the fastest finish time and Chef's finish time
+    X, Y = map(int, input().split())
+    
+    # Check if Chef is allowed to race
+    result = is_allowed_to_race(X, Y)
+    
+    # Print the result
+    print(result)
