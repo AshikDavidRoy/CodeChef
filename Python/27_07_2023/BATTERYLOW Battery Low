@@ -1,0 +1,13 @@
+def battery_low_notification(battery_level):
+    return "Yes" if battery_level <= 15 else "No"
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the battery level of Chef's phone
+    X = int(input())
+    
+    # Determine if the phone would show a Battery Low notification
+    print(battery_low_notification(X))
