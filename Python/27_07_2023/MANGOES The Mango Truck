@@ -1,0 +1,17 @@
+def max_mangoes(weight_mango, weight_truck, weight_bridge):
+    max_mangoes = (weight_bridge - weight_truck) // weight_mango
+    return max_mangoes
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the weight of mango, weight of truck, and weight the bridge can withstand
+    X, Y, Z = map(int, input().split())
+    
+    # Calculate the maximum number of mangoes that can be loaded in the truck
+    result = max_mangoes(X, Y, Z)
+    
+    # Print the result
+    print(result)
