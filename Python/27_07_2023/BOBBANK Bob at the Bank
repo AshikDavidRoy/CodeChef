@@ -1,0 +1,22 @@
+def final_balance(initial_balance, amount_deposited, amount_deducted, num_months):
+    final_balance = initial_balance
+    
+    for _ in range(num_months):
+        final_balance += amount_deposited
+        final_balance -= amount_deducted
+    
+    return final_balance
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the initial amount, amount deposited per month, amount deducted per month, and number of months
+    W, X, Y, Z = map(int, input().split())
+    
+    # Calculate the final balance
+    result = final_balance(W, X, Y, Z)
+    
+    # Print the final balance
+    print(result)
