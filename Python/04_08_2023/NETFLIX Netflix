@@ -1,0 +1,19 @@
+def can_buy_subscription(A, B, C, X):
+    if (A + B >= X) or (A + C >= X) or (B + C >= X):
+        return "YES"
+    else:
+        return "NO"
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read A, B, C, and X for each test case
+    A, B, C, X = map(int, input().split())
+
+    # Check if any two of them can contribute to buy a subscription
+    result = can_buy_subscription(A, B, C, X)
+
+    # Print the result for each test case
+    print(result)
