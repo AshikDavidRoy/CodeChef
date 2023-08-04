@@ -1,0 +1,17 @@
+def minimum_money_needed(C, X, Y):
+    required_chocolates = C - X
+    return required_chocolates * Y
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read C, X, and Y for each test case
+    C, X, Y = map(int, input().split())
+
+    # Calculate the minimum money needed to buy the required chocolates
+    result = minimum_money_needed(C, X, Y)
+
+    # Print the result for each test case
+    print(result)
